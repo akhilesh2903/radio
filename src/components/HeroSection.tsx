@@ -32,7 +32,7 @@ export default function HeroSection() {
   const [show3DModal, setShow3DModal] = useState(false);
 
   return (
-    <section id="hero" className="relative pt-2 pb-12 lg:py-8 bg-[#FAF7F2] text-slate-800 overflow-hidden">
+    <section id="hero" className="relative pt-2 pb-10 lg:py-8 bg-[#FAF7F2] text-slate-800 overflow-hidden">
       {/* Ambient warm background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[350px] bg-gradient-to-b from-[#EFE5D3]/70 via-[#E8DFC9]/40 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
 
@@ -63,111 +63,41 @@ export default function HeroSection() {
             className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white hover:bg-[#F5EFEB] border border-[#E5DAC6] text-slate-700 hover:text-[#0F2C59] text-xs font-semibold transition-all shadow-xs group cursor-pointer"
           >
             <Box className="w-3.5 h-3.5 text-[#EA580C] group-hover:rotate-12 transition-transform" />
-            <span>Interactive 3D Radio &amp; Studio Prop</span>
+            <span></span>
           </button>
         </div>
       </div>
 
       {/* ======================================================== */}
-      {/* FULL-WIDTH MASTER STUDIO FRAME: EDGE-TO-EDGE CINEMATIC STAGE */}
+      {/* FULL-WIDTH MASTER STUDIO HERO STAGE (MOBILE RESPONSIVE) */}
       {/* ======================================================== */}
       <div className="relative w-full overflow-hidden border-y-2 border-[#E5DAC6] bg-black shadow-[0_25px_80px_rgba(15,44,89,0.18)]">
         
-        {/* Panoramic Clean Broadcast Studio Interior Backdrop */}
-        <div className="relative w-full h-[500px] sm:h-[540px] md:h-[580px] lg:h-[620px] flex items-center justify-center overflow-hidden">
+        {/* Panoramic Uploaded Broadcast Studio Backdrop */}
+        <div className="relative w-full min-h-[500px] sm:h-[540px] md:h-[580px] lg:h-[620px] flex items-center justify-center overflow-hidden">
           <Image
-            src="/images/studio-hero-bg.jpg"
-            alt="Radio Alva's 88.4 FM Broadcast Studio at Moodubidire"
+            src="/heroimage.png"
+            alt="Radio Alva's 88.4 FM Broadcast Studio"
             fill
             priority
             className="object-cover object-center"
             sizes="100vw"
           />
 
-          {/* Cinematic Lighting Vignette */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/35 pointer-events-none" />
+          {/* Cinematic Vignette for High Contrast Legibility */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/35 pointer-events-none" />
 
-          {/* Top-Right Transmission Tower Callout Overlay */}
-          <div className="absolute top-[12%] right-[5%] sm:right-[8%] lg:right-[11%] hidden md:flex items-center gap-2 z-20 pointer-events-none">
-            <div className="relative flex items-center justify-center w-12 h-12">
-              <span className="absolute w-6 h-6 rounded-full border border-amber-400/80 animate-ping [animation-duration:2.8s]" />
-              <span className="absolute w-10 h-10 rounded-full border border-amber-400/50 animate-ping [animation-duration:2.8s] [animation-delay:0.8s]" />
-              <span className="absolute w-14 h-14 rounded-full border border-amber-400/30 animate-ping [animation-duration:2.8s] [animation-delay:1.6s]" />
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-400 shadow-[0_0_10px_#F59E0B]" />
-            </div>
-            <div className="flex flex-col text-left">
-              <span className="text-amber-400 font-black text-xs sm:text-sm tracking-wider drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
-                88.4 FM
-              </span>
-              <span className="text-[9px] uppercase tracking-wider text-amber-200/90 font-mono drop-shadow">
-                On-Air Mast
-              </span>
-            </div>
-          </div>
-
-          {/* Top-Left Glowing 'ON AIR' Studio Box */}
-          <div className="absolute top-5 sm:top-6 left-5 sm:left-8 lg:left-12 hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-md bg-red-600/90 text-white font-mono font-bold text-xs tracking-wider uppercase shadow-[0_0_15px_rgba(220,38,38,0.7)] border border-red-400 z-20">
-            <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-            <span>ON AIR</span>
-          </div>
-
-          {/* Overlaid Alva's Emblem on Left Condenser Microphone Windscreen */}
-          <div className="absolute top-[44%] left-[17%] sm:left-[19%] -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden sm:block z-10">
+          {/* Subtle Condenser Microphone Windscreen Badge Overlay */}
+          <div className="absolute top-[44%] left-[17%] sm:left-[19%] -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden md:block z-10">
             <div className="flex flex-col items-center justify-center p-1 rounded-md bg-black/40 backdrop-blur-xs border border-amber-400/20 shadow-lg">
-              <div className="relative w-8 h-8 sm:w-10 sm:h-10">
-                <Image
-                  src="/alvas-org-logo.png"
-                  alt="Alva's Education Foundation"
-                  fill
-                  className="object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]"
-                />
-              </div>
+             
               <span className="text-[7px] text-amber-300 font-bold tracking-tighter mt-0.5 uppercase drop-shadow">
-                Alva&apos;s
+               
               </span>
             </div>
           </div>
 
-          {/* Overlaid Glowing Frequency Ring on Left Studio Headphones */}
-          <div className="absolute bottom-[23%] left-[12%] -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden md:block z-10">
-            <div className="w-10 h-10 rounded-full border border-amber-400/70 border-dashed animate-spin [animation-duration:15s] flex items-center justify-center">
-              <div className="w-5 h-5 rounded-full bg-amber-500/30 flex items-center justify-center">
-                <Radio className="w-3 h-3 text-amber-300" />
-              </div>
-            </div>
-          </div>
-
-          {/* Overlaid Handwritten Desk Notepad Items (Bottom Left) */}
-          <div className="absolute bottom-5 sm:bottom-7 left-6 sm:left-10 lg:left-14 hidden lg:block pointer-events-none select-none -rotate-2 z-10">
-            <div className="bg-[#FAF7F0] text-slate-800 text-[10px] font-serif p-2 sm:p-2.5 rounded shadow-lg border border-slate-300/80 max-w-[130px] leading-tight">
-              <div className="font-sans font-bold text-[9px] text-[#0F2C59] border-b border-slate-300 pb-0.5 mb-1 tracking-wider uppercase">
-                Today&apos;s Agenda
-              </div>
-              <ul className="space-y-0.5 text-slate-700 italic">
-                <li>&bull; Community</li>
-                <li>&bull; Culture</li>
-                <li>&bull; Education</li>
-                <li>&bull; Health</li>
-                <li>&bull; Better Tomorrow...</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Overlaid Golden Brand Script on Right Studio Coffee Mug */}
-          <div className="absolute bottom-[9%] right-[10%] sm:right-[13%] lg:right-[15%] pointer-events-none select-none text-center hidden md:block -rotate-2 z-10">
-            <div className="font-cursive text-amber-300 text-xs sm:text-sm drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] font-bold leading-tight">
-              Namma<br />Moodubidire<br />Namma Dhwani
-            </div>
-            <div className="flex items-center justify-center gap-0.5 mt-0.5">
-              <span className="w-0.5 h-1.5 bg-amber-400 rounded-full" />
-              <span className="w-0.5 h-3 bg-amber-400 rounded-full" />
-              <span className="w-0.5 h-2 bg-amber-400 rounded-full" />
-              <span className="w-0.5 h-3.5 bg-amber-400 rounded-full" />
-              <span className="w-0.5 h-1.5 bg-amber-400 rounded-full" />
-            </div>
-          </div>
-
-          {/* Right Category Pillar Column with Golden Vertical Line */}
+          {/* Right Category Pillar Column with Golden Line (Desktop only) */}
           <div className="absolute top-[48%] right-4 sm:right-7 lg:right-10 -translate-y-1/2 hidden md:flex items-center z-20">
             <div className="border-r-2 border-amber-500 pr-3 sm:pr-4 space-y-2 text-right">
               {CATEGORY_PILLARS.map((cat) => (
@@ -185,17 +115,17 @@ export default function HeroSection() {
           {/* ======================================================== */}
           {/* CENTER STAGE: CODED REAL TYPOGRAPHY & LIVE SOUNDWAVE      */}
           {/* ======================================================== */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-8 text-center z-20 pointer-events-none pb-2 sm:pb-4">
-            <div className="max-w-2xl sm:max-w-3xl pointer-events-auto flex flex-col items-center">
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-3 sm:px-8 text-center z-20 pointer-events-none pb-2 sm:pb-4">
+            <div className="max-w-2xl sm:max-w-3xl pointer-events-auto flex flex-col items-center w-full">
               
               {/* Line 1: RADIO ALVA'S */}
               <div className="flex items-center justify-center gap-2 sm:gap-3.5 mb-0.5 sm:mb-1">
                 {/* RADI with custom O containing golden microphone & broadcast waves */}
-                <div className="flex items-center text-white font-black tracking-tight text-3xl sm:text-5xl md:text-6xl font-sans drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+                <div className="flex items-center text-white font-black tracking-tight text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-sans drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
                   <span>RADI</span>
                   <span className="relative inline-flex items-center justify-center mx-1 sm:mx-1.5 align-middle">
-                    <span className="w-8 h-8 sm:w-11 sm:h-11 md:w-13 md:h-13 rounded-full border-2 sm:border-3 border-amber-400 bg-gradient-to-b from-amber-400/35 to-amber-600/20 flex items-center justify-center shadow-[0_0_15px_rgba(245,158,11,0.6)]">
-                      <svg className="w-4 h-4 sm:w-6 sm:h-6 md:w-7 md:h-7 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <span className="w-7 h-7 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border-2 sm:border-3 border-amber-400 bg-gradient-to-b from-amber-400/35 to-amber-600/20 flex items-center justify-center shadow-[0_0_15px_rgba(245,158,11,0.6)]">
+                      <svg className="w-3.5 h-3.5 sm:w-5 sm:h-5 md:w-6 md:h-6 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" fill="currentColor" fillOpacity="0.3" />
                         <path d="M19 10v1a7 7 0 0 1-14 0v-1" />
                         <line x1="12" y1="18" x2="12" y2="22" />
@@ -208,12 +138,12 @@ export default function HeroSection() {
                 </div>
 
                 {/* ALVA'S in rich 3D gold chrome typography */}
-                <div className="font-black tracking-tight text-3xl sm:text-5xl md:text-6xl font-sans bg-gradient-to-b from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+                <div className="font-black tracking-tight text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-sans bg-gradient-to-b from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
                   ALVA&apos;S
                 </div>
               </div>
 
-              {/* Line 2: 88.4 FM with dynamic glowing horizontal soundwave expanding behind it */}
+              {/* Line 2: 88.4 FM with dynamic glowing horizontal soundwave */}
               <div className="relative w-full max-w-xl sm:max-w-2xl flex items-center justify-center my-0">
                 {/* Dynamic Glowing Horizontal Audio Waveform */}
                 <div className="absolute -inset-x-4 sm:-inset-x-12 top-1/2 -translate-y-1/2 h-14 sm:h-20 flex items-center justify-between opacity-85 pointer-events-none -z-10 overflow-hidden">
@@ -231,36 +161,36 @@ export default function HeroSection() {
                 </div>
 
                 {/* 88.4 FM Typography */}
-                <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-normal text-white uppercase drop-shadow-[0_6px_24px_rgba(0,0,0,0.95)] font-sans">
+                <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-normal text-white uppercase drop-shadow-[0_6px_24px_rgba(0,0,0,0.95)] font-sans">
                   88.4 FM
                 </h1>
               </div>
 
               {/* Line 3: -- VOICE FOR A BETTER TOMORROW -- */}
-              <div className="flex items-center justify-center gap-2 sm:gap-4 text-[10px] sm:text-xs md:text-sm font-extrabold uppercase tracking-[0.22em] sm:tracking-[0.3em] text-amber-400 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] mt-0.5 sm:mt-1">
-                <span className="h-[1.5px] w-6 sm:w-14 bg-gradient-to-r from-transparent to-amber-400" />
+              <div className="flex items-center justify-center gap-2 sm:gap-4 text-[10px] sm:text-xs md:text-sm font-extrabold uppercase tracking-[0.16em] sm:tracking-[0.28em] text-amber-400 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] mt-0.5 sm:mt-1">
+                <span className="h-[1.5px] w-5 sm:w-14 bg-gradient-to-r from-transparent to-amber-400" />
                 <span>VOICE FOR A BETTER TOMORROW</span>
-                <span className="h-[1.5px] w-6 sm:w-14 bg-gradient-to-l from-transparent to-amber-400" />
+                <span className="h-[1.5px] w-5 sm:w-14 bg-gradient-to-l from-transparent to-amber-400" />
               </div>
 
               {/* Line 4: Calligraphic Secondary Tagline */}
-              <div className="font-cursive text-2xl sm:text-3xl md:text-4xl lg:text-[42px] text-amber-300 drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)] my-0.5 sm:my-1">
+              <div className="font-cursive text-xl sm:text-3xl md:text-4xl lg:text-[42px] text-amber-300 drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)] my-0.5 sm:my-1">
                 Namma Moodubidire, Namma Dhwani
               </div>
 
               {/* Line 5: Supporting Description */}
-              <p className="text-[11px] sm:text-xs md:text-sm text-slate-200/90 max-w-lg mx-auto leading-relaxed font-light drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] px-2">
+              <p className="text-[11px] sm:text-xs md:text-sm text-slate-200/90 max-w-sm sm:max-w-lg mx-auto leading-relaxed font-light drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] px-2">
                 Moodubidire is home to many voices, languages, traditions and ideas.
                 <span className="block sm:inline"> Radio Alva&apos;s 88.4 FM is a community platform for sharing them.</span>
               </p>
 
-              {/* Line 6: Master Interactive CTA Buttons */}
-              <div className="pt-2 sm:pt-3 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+              {/* Line 6: Master Interactive CTA Buttons (Mobile Responsive) */}
+              <div className="pt-2.5 sm:pt-3 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 w-full sm:w-auto px-4">
                 {/* Primary: LISTEN LIVE with circular white play badge */}
                 <button
                   onClick={togglePlay}
                   type="button"
-                  className="inline-flex items-center gap-2.5 sm:gap-3 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full bg-gradient-to-r from-[#FF5E14] via-[#F59E0B] to-[#FF5E14] hover:from-[#EA580C] hover:to-[#EA580C] text-white font-black text-xs sm:text-sm uppercase tracking-wider transition-all shadow-[0_6px_25px_rgba(255,94,20,0.5)] hover:scale-105 active:scale-95 cursor-pointer group"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full bg-gradient-to-r from-[#FF5E14] via-[#F59E0B] to-[#FF5E14] hover:from-[#EA580C] hover:to-[#EA580C] text-white font-black text-xs sm:text-sm uppercase tracking-wider transition-all shadow-[0_6px_25px_rgba(255,94,20,0.5)] hover:scale-105 active:scale-95 cursor-pointer group"
                 >
                   <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white flex items-center justify-center shadow-xs shrink-0 group-hover:rotate-6 transition-transform">
                     {isLoading ? (
@@ -277,7 +207,7 @@ export default function HeroSection() {
                 {/* Secondary: EXPLORE OUR PROGRAMMES with white/glass border */}
                 <Link
                   href="#schedule"
-                  className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-black/60 hover:bg-black/80 backdrop-blur-md border border-white/60 hover:border-amber-400 text-white font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-lg group"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-black/60 hover:bg-black/80 backdrop-blur-md border border-white/60 hover:border-amber-400 text-white font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-lg group"
                 >
                   <span>EXPLORE OUR PROGRAMMES</span>
                   <ArrowRight className="w-4 h-4 text-amber-400 group-hover:translate-x-1 transition-transform" />

@@ -221,52 +221,33 @@ export default function Navbar() {
           }`}
           aria-label="Main Navigation"
         >
-          {/* Brand Identity Area matching the reference mockup */}
-          <Link href="#hero" className="flex items-center gap-2.5 sm:gap-3 shrink-0 group">
-            {/* Alva's Organization Official Crest */}
-            <div className="relative h-9 w-9 sm:h-10 sm:w-10 shrink-0 hidden sm:block">
+          {/* Brand Identity Area: First Alva's Logo, then Radio Logo (Large & Visible) */}
+          <Link href="#hero" className="flex items-center gap-2 sm:gap-3 shrink-0 group">
+            {/* 1. Alva's Education Foundation Official Emblem */}
+            <div className="relative h-10 sm:h-12 w-auto flex items-center">
               <Image
                 src="/alvas-org-logo.png"
-                alt="Alva's Education Foundation"
-                fill
-                className="object-contain transition-transform group-hover:scale-105"
+                alt="Alva's Education Foundation Emblem"
+                width={100}
+                height={48}
+                priority
+                className="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105"
               />
             </div>
 
-            {/* Exact Brand Typography from the design */}
-            <div className="flex flex-col text-left select-none">
-              {/* Line 1: RADIO ALVA'S */}
-              <span className="font-sans font-black text-xs sm:text-sm tracking-tight text-slate-900 group-hover:text-[#0F2C59] transition-colors uppercase leading-none">
-                RADIO ALVA&apos;S
-              </span>
+            {/* Subtle Divider */}
+            <div className="h-7 sm:h-8 w-px bg-slate-200/90 hidden xs:block" />
 
-              {/* Line 2: |||| 88.4 FM |||| with miniature orange waveform */}
-              <div className="flex items-center gap-1.5 py-0.5">
-                <span className="flex items-center gap-0.5">
-                  <span className="w-0.5 h-1.5 rounded-full bg-[#EA580C]" />
-                  <span className="w-0.5 h-3 rounded-full bg-[#EA580C]" />
-                  <span className="w-0.5 h-2 rounded-full bg-[#EA580C]" />
-                  <span className="w-0.5 h-3.5 rounded-full bg-[#EA580C]" />
-                  <span className="w-0.5 h-1.5 rounded-full bg-[#EA580C]" />
-                </span>
-
-                <span className="font-extrabold text-[11px] sm:text-xs text-[#EA580C] tracking-wide leading-none">
-                  88.4 FM
-                </span>
-
-                <span className="flex items-center gap-0.5">
-                  <span className="w-0.5 h-1.5 rounded-full bg-[#EA580C]" />
-                  <span className="w-0.5 h-3.5 rounded-full bg-[#EA580C]" />
-                  <span className="w-0.5 h-2 rounded-full bg-[#EA580C]" />
-                  <span className="w-0.5 h-3 rounded-full bg-[#EA580C]" />
-                  <span className="w-0.5 h-1.5 rounded-full bg-[#EA580C]" />
-                </span>
-              </div>
-
-              {/* Line 3: Voice for a Better Tomorrow */}
-              <span className="text-[9px] font-medium text-slate-500 tracking-tight leading-none">
-                Voice for a Better Tomorrow
-              </span>
+            {/* 2. Radio Alva's 88.4 FM Official Logo */}
+            <div className="relative h-10 sm:h-12 w-auto flex items-center">
+              <Image
+                src="/radiologo.png"
+                alt="Radio Alva's 88.4 FM Logo"
+                width={130}
+                height={48}
+                priority
+                className="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105"
+              />
             </div>
           </Link>
 
@@ -394,10 +375,21 @@ export default function Navbar() {
         <div className="lg:hidden fixed inset-x-0 top-[110px] mx-4 p-5 bg-white/98 backdrop-blur-2xl rounded-3xl border border-[#E5DAC6] shadow-2xl z-50 text-slate-800 animate-in fade-in slide-in-from-top-4 duration-200">
           <div className="flex items-center justify-between pb-3 border-b border-slate-200">
             <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse" />
-              <span className="text-xs font-bold text-[#0F2C59] uppercase tracking-wider">
-                Radio Alva&apos;s 88.4 FM
-              </span>
+              <Image
+                src="/alvas-org-logo.png"
+                alt="Alva's Logo"
+                width={70}
+                height={32}
+                className="h-8 w-auto object-contain"
+              />
+              <div className="h-6 w-px bg-slate-300" />
+              <Image
+                src="/radiologo.png"
+                alt="Radio Alva's Logo"
+                width={90}
+                height={32}
+                className="h-8 w-auto object-contain"
+              />
             </div>
             <span className="text-[11px] font-mono text-slate-500">{currentTimeIST} IST</span>
           </div>
