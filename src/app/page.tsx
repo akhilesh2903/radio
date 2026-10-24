@@ -13,13 +13,13 @@ import PersistentPlayer from "@/components/PersistentPlayer";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#080c14] text-white">
+    <div className="flex flex-col min-h-screen bg-[#FAF7F2] text-slate-800">
       {/* Top Header with Dual Branding (Radio Logo & Alva's Org Logo) */}
       <Navbar />
 
       {/* Main Content Sections */}
       <main className="flex-1">
-        {/* Cinematic 3D Radio Hero Section */}
+        {/* Cinematic Studio Hero Section matching user design */}
         <HeroSection />
 
         {/* About Radio Alva's 88.4 FM, Vision & Mission */}
@@ -44,7 +44,7 @@ export default function HomePage() {
         <ContactSection />
       </main>
 
-      {/* Broadcast-Inspired Dark Footer with Dual Logos */}
+      {/* Royal Navy Footer with Curved Top Arch & Dual Logos */}
       <Footer />
 
       {/* Persistent Bottom Audio Player with Live Transmission Status */}

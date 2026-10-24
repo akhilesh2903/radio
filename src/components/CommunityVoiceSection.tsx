@@ -91,36 +91,31 @@ export default function CommunityVoiceSection() {
   };
 
   return (
-    <section id="community-voice" className="relative py-24 bg-gradient-to-b from-[#0b0f17] via-[#111622] to-[#0c1018] text-white overflow-hidden border-t border-white/5">
-      {/* Background visual accents */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-orange-600/20 rounded-full blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:24px_24px]" />
-      </div>
-
+    <section id="community-voice" className="relative py-20 lg:py-28 bg-[#F5EFEB] text-slate-800 overflow-hidden border-t border-[#E5DAC6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
         {/* Header Callout */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold tracking-wider uppercase mb-4">
-            <Mic2 className="w-3.5 h-3.5 text-amber-400" />
-            COMMUNITY PARTICIPATION
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0F2C59]/10 border border-[#0F2C59]/20 text-[#0F2C59] text-xs font-semibold tracking-wider uppercase mb-4">
+            <Mic2 className="w-3.5 h-3.5 text-[#EA580C]" />
+            <span>COMMUNITY PARTICIPATION</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white uppercase font-sans">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-[#0F2C59] uppercase font-sans">
             YOUR VOICE. YOUR COMMUNITY. <br />
-            <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200 bg-clip-text text-transparent">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EA580C] to-[#F59E0B]">
               YOUR RADIO.
             </span>
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+          <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-light">
             Have a story, an idea or a message to share? Join Radio Alva&apos;s and help shape the conversations that matter to Moodubidire.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
           {/* Left: Category Picker & Station Mission Context */}
           <div className="lg:col-span-5 space-y-4">
-            <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">
+            <h3 className="text-xs font-bold text-[#0F2C59] uppercase tracking-wider mb-2 font-mono">
               Select What You Want To Share
             </h3>
 
@@ -138,33 +133,33 @@ export default function CommunityVoiceSection() {
                         setMessage(cat.defaultNote);
                       }
                     }}
-                    className={`w-full text-left p-4 rounded-xl border transition-all flex items-start gap-3.5 ${
+                    className={`w-full text-left p-4 rounded-2xl border transition-all flex items-start gap-3.5 cursor-pointer ${
                       isSelected
-                        ? "bg-amber-500/15 border-amber-500/50 shadow-lg shadow-amber-500/10"
-                        : "bg-white/[0.03] border-white/10 hover:bg-white/[0.06] hover:border-white/20"
+                        ? "bg-white border-[#EA580C] shadow-md ring-2 ring-[#EA580C]/20"
+                        : "bg-white/80 border-[#E5DAC6] hover:bg-white hover:border-slate-300 shadow-xs"
                     }`}
                   >
-                    <div className={`p-2.5 rounded-lg shrink-0 mt-0.5 ${
-                      isSelected ? "bg-amber-500 text-black font-bold" : "bg-white/10 text-slate-300"
+                    <div className={`p-2.5 rounded-xl shrink-0 mt-0.5 ${
+                      isSelected ? "bg-[#EA580C] text-white" : "bg-[#F5EFEB] text-[#0F2C59]"
                     }`}>
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-2">
-                        <span className={`text-base font-semibold ${isSelected ? "text-white" : "text-slate-200"}`}>
+                        <span className={`text-base font-bold ${isSelected ? "text-[#0F2C59]" : "text-slate-800"}`}>
                           {cat.title}
                         </span>
                         {isSelected && (
-                          <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-400 text-black font-bold shrink-0">
+                          <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#EA580C] text-white font-bold shrink-0">
                             Selected
                           </span>
                         )}
                       </div>
-                      <p className="text-xs text-slate-400 mt-1 line-clamp-2 leading-relaxed">
+                      <p className="text-xs text-slate-500 mt-1 line-clamp-2 leading-relaxed">
                         {cat.subtitle}
                       </p>
-                      <div className="mt-2 text-[11px] text-amber-400/90 font-mono">
-                        Broadcast match: {cat.programmeMatch}
+                      <div className="mt-2 text-[11px] text-[#0F2C59] font-mono font-medium">
+                        Slot: {cat.programmeMatch}
                       </div>
                     </div>
                   </button>
@@ -173,40 +168,40 @@ export default function CommunityVoiceSection() {
             </div>
 
             {/* Authentic Studio Note Banner */}
-            <div className="p-4 rounded-xl bg-gradient-to-br from-white/[0.04] to-transparent border border-white/10 mt-6 flex items-start gap-3">
-              <HeartHandshake className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-              <div className="text-xs text-slate-300 leading-relaxed">
-                <span className="font-semibold text-white">Broadcast Policy:</span> Every submission is reviewed by our station coordinators (Archith Jain Samse & Shainitha R.S.) for upcoming morning and evening slots.
+            <div className="p-4 rounded-2xl bg-white border border-[#E5DAC6] shadow-xs mt-6 flex items-start gap-3">
+              <HeartHandshake className="w-5 h-5 text-[#EA580C] shrink-0 mt-0.5" />
+              <div className="text-xs text-slate-600 leading-relaxed">
+                <span className="font-bold text-[#0F2C59]">Broadcast Policy:</span> Every submission is reviewed by station coordinators (Archith Jain Samse &amp; Shainitha R.S.) for inclusion in upcoming daily slots.
               </div>
             </div>
           </div>
 
           {/* Right: Interactive Submission Box with WhatsApp Integration */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-xl relative shadow-2xl">
-              <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
+            <div className="p-6 sm:p-8 rounded-3xl bg-white border border-[#E5DAC6] shadow-lg relative">
+              <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-200">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-black font-black">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0F2C59] to-[#1E3A8A] flex items-center justify-center text-white font-black">
                     88.4
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-white">Voice of Moodubidire Portal</h4>
-                    <p className="text-xs text-slate-400">Direct transmission to Station Desk &bull; Moodubidire</p>
+                    <h4 className="text-base font-bold text-[#0F2C59]">Voice of Moodubidire Portal</h4>
+                    <p className="text-xs text-slate-500">Direct transmission to Station Desk &bull; Vidyagiri</p>
                   </div>
                 </div>
-                <span className="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-[11px] font-mono text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
                   Live Desk Active
                 </span>
               </div>
 
               {submitted ? (
                 <div className="py-12 text-center space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto">
+                  <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 border border-emerald-200 flex items-center justify-center mx-auto">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h4 className="text-xl font-bold text-white">Thank You for Connecting!</h4>
-                  <p className="text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
+                  <h4 className="text-xl font-bold text-[#0F2C59]">Thank You for Connecting!</h4>
+                  <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
                     Your message draft has been routed to Radio Alva&apos;s WhatsApp broadcast desk at <strong>+91 {STATION_CONFIG.whatsapp}</strong>. Our programming team will review it for upcoming shows.
                   </p>
                   <div className="pt-4 flex flex-wrap justify-center gap-3">
@@ -216,13 +211,13 @@ export default function CommunityVoiceSection() {
                         setSubmitted(false);
                         setMessage("");
                       }}
-                      className="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs font-semibold transition-colors"
+                      className="px-5 py-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-colors"
                     >
                       Submit Another Topic
                     </button>
                     <a
                       href="#contact"
-                      className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-black text-xs font-bold transition-all shadow-md"
+                      className="px-5 py-2.5 rounded-full bg-[#0F2C59] hover:bg-[#1E3A8A] text-white text-xs font-bold transition-all shadow-sm"
                     >
                       View All Contact Options
                     </a>
@@ -232,8 +227,8 @@ export default function CommunityVoiceSection() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                        Your Full Name <span className="text-amber-400">*</span>
+                      <label className="block text-xs font-bold text-slate-700 mb-1.5">
+                        Your Full Name <span className="text-[#EA580C]">*</span>
                       </label>
                       <input
                         type="text"
@@ -241,11 +236,11 @@ export default function CommunityVoiceSection() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="e.g. Ramesh Bhat, Ashwitha..."
-                        className="w-full px-4 py-2.5 rounded-xl bg-black/40 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 transition-colors"
+                        className="w-full px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-[#E5DAC6] text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-[#0F2C59] transition-colors"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1.5">
+                      <label className="block text-xs font-bold text-slate-700 mb-1.5">
                         Locality / Village / College
                       </label>
                       <input
@@ -253,15 +248,15 @@ export default function CommunityVoiceSection() {
                         value={locality}
                         onChange={(e) => setLocality(e.target.value)}
                         placeholder="e.g. Vidyagiri, Moodubidire, Belvai..."
-                        className="w-full px-4 py-2.5 rounded-xl bg-black/40 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 transition-colors"
+                        className="w-full px-4 py-2.5 rounded-xl bg-[#FAF7F2] border border-[#E5DAC6] text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-[#0F2C59] transition-colors"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-slate-300 mb-1.5 flex justify-between items-center">
-                      <span>Your Story, Idea or Announcement <span className="text-amber-400">*</span></span>
-                      <span className="text-[11px] text-slate-400">Kannada, Tulu, or English welcome</span>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5 flex justify-between items-center">
+                      <span>Your Story, Idea or Announcement <span className="text-[#EA580C]">*</span></span>
+                      <span className="text-[11px] text-slate-500 font-normal">Kannada, Tulu, or English welcome</span>
                     </label>
                     <textarea
                       required
@@ -269,16 +264,16 @@ export default function CommunityVoiceSection() {
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       placeholder={activeCategory.defaultNote}
-                      className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-amber-400 transition-colors resize-none leading-relaxed"
+                      className="w-full px-4 py-3 rounded-xl bg-[#FAF7F2] border border-[#E5DAC6] text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-[#0F2C59] transition-colors resize-none leading-relaxed"
                     />
                   </div>
 
-                  <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-between gap-3 text-xs text-amber-300">
+                  <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-between gap-3 text-xs text-amber-900">
                     <span className="flex items-center gap-2">
-                      <MessageSquare className="w-4 h-4 shrink-0 text-amber-400" />
-                      Submissions open directly in WhatsApp to station phone: <strong>{STATION_CONFIG.whatsapp}</strong>
+                      <MessageSquare className="w-4 h-4 shrink-0 text-[#EA580C]" />
+                      Direct WhatsApp link to station phone: <strong>{STATION_CONFIG.whatsapp}</strong>
                     </span>
-                    <span className="hidden sm:inline font-mono text-[10px] bg-amber-400/20 px-2 py-0.5 rounded">
+                    <span className="hidden sm:inline font-mono text-[10px] bg-amber-200/60 px-2 py-0.5 rounded font-bold">
                       Instant Delivery
                     </span>
                   </div>
@@ -286,17 +281,17 @@ export default function CommunityVoiceSection() {
                   <div className="pt-2 flex flex-col sm:flex-row gap-3">
                     <button
                       type="submit"
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 hover:from-amber-400 hover:to-orange-400 text-black font-bold text-sm tracking-wide transition-all shadow-lg shadow-amber-500/25 active:scale-[0.99] cursor-pointer"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#EA580C] to-[#F59E0B] hover:from-[#D9480F] hover:to-[#EA580C] text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md shadow-orange-500/25 active:scale-[0.99] cursor-pointer"
                     >
                       <Send className="w-4 h-4" />
-                      SEND TO RADIO ALVA&apos;S DESK
+                      <span>SEND TO RADIO ALVA&apos;S DESK</span>
                     </button>
                     <a
                       href={`tel:${STATION_CONFIG.phone}`}
-                      className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-sm transition-colors shrink-0"
+                      className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs uppercase tracking-wider transition-colors shrink-0"
                     >
-                      <PhoneCall className="w-4 h-4 text-amber-400" />
-                      Call {STATION_CONFIG.phone}
+                      <PhoneCall className="w-4 h-4 text-[#EA580C]" />
+                      <span>Call {STATION_CONFIG.phone}</span>
                     </a>
                   </div>
                 </form>
