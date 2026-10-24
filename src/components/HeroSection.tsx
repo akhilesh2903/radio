@@ -6,10 +6,7 @@ import Link from "next/link";
 import {
   Play,
   Pause,
-  Radio,
-  MapPin,
   ArrowRight,
-  Box,
   X,
   Mic2,
   Signal,
@@ -32,41 +29,10 @@ export default function HeroSection() {
   const [show3DModal, setShow3DModal] = useState(false);
 
   return (
-    <section id="hero" className="relative pt-2 pb-10 lg:py-8 bg-[#FAF7F2] text-slate-800 overflow-hidden">
+    <section id="hero" className="relative pt-0 pb-10 lg:py-8 bg-[#FAF7F2] text-slate-800 overflow-hidden">
       {/* Ambient warm background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[350px] bg-gradient-to-b from-[#EFE5D3]/70 via-[#E8DFC9]/40 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
 
-      {/* Top Badges & Transmission Ribbon Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-3 sm:mb-4">
-        <div className="flex flex-wrap items-center justify-between gap-2.5">
-          <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0F2C59] text-white font-mono text-xs font-semibold shadow-xs">
-              <Radio className="w-3.5 h-3.5 text-[#F59E0B] animate-pulse" />
-              <span>88.4 MHz FM</span>
-            </span>
-
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#E5DAC6] text-slate-700 text-xs font-medium shadow-xs">
-              <MapPin className="w-3.5 h-3.5 text-[#EA580C]" />
-              <span>Moodubidire, Karnataka</span>
-            </span>
-
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2563EB]/10 border border-[#2563EB]/25 text-[#1E3A8A] text-xs font-semibold">
-              <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-ping" />
-              <span>Taluk&apos;s 1st Community Radio</span>
-            </span>
-          </div>
-
-          {/* Interactive 3D Radio & Studio Prop Modal Trigger */}
-          <button
-            type="button"
-            onClick={() => setShow3DModal(true)}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white hover:bg-[#F5EFEB] border border-[#E5DAC6] text-slate-700 hover:text-[#0F2C59] text-xs font-semibold transition-all shadow-xs group cursor-pointer"
-          >
-            <Box className="w-3.5 h-3.5 text-[#EA580C] group-hover:rotate-12 transition-transform" />
-            <span></span>
-          </button>
-        </div>
-      </div>
 
       {/* ======================================================== */}
       {/* FULL-WIDTH MASTER STUDIO HERO STAGE (MOBILE RESPONSIVE) */}

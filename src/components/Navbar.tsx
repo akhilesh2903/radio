@@ -238,16 +238,17 @@ export default function Navbar() {
             {/* Subtle Divider */}
             <div className="h-7 sm:h-8 w-px bg-slate-200/90 hidden xs:block" />
 
-            {/* 2. Radio Alva's 88.4 FM Official Logo (Enlarged for Clear Visibility) */}
-            <div className="relative h-12 sm:h-14 lg:h-15 w-auto flex items-center">
-              <Image
-                src="/radiologo.png"
-                alt="Radio Alva's 88.4 FM Logo"
-                width={160}
-                height={58}
-                priority
-                className="h-11 sm:h-13 lg:h-14 w-auto object-contain transition-transform group-hover:scale-105"
-              />
+            {/* 2. Radio Alva's 88.4 FM Official Logo (Large & Visible) */}
+            <div className="relative h-11 sm:h-13 lg:h-14 w-28 sm:w-36 lg:w-44 flex items-center justify-center overflow-hidden">
+              <div className="relative w-44 sm:w-56 lg:w-64 h-44 sm:h-56 lg:h-38 shrink-0 flex items-center justify-center">
+                <Image
+                  src="/radiologo.png"
+                  alt="Radio Alva's 88.4 FM Logo"
+                  fill
+                  priority
+                  className="object-contain transition-transform group-hover:scale-105"
+                />
+              </div>
             </div>
           </Link>
 
