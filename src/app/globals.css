@@ -94,3 +94,7 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+.font-cursive {
+  font-family: var(--font-cursive), "Brush Script MT", "Caveat", cursive;
+}
