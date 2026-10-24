@@ -40,18 +40,18 @@ export default function HeroSection() {
       <div className="relative w-full overflow-hidden border-y-2 border-[#E5DAC6] bg-black shadow-[0_25px_80px_rgba(15,44,89,0.18)]">
         
         {/* Panoramic Uploaded Broadcast Studio Backdrop */}
-        <div className="relative w-full min-h-[500px] sm:h-[540px] md:h-[580px] lg:h-[620px] flex items-center justify-center overflow-hidden">
+        <div className="relative w-full min-h-[440px] xs:min-h-[460px] sm:min-h-[500px] md:h-[580px] lg:h-[620px] flex items-center justify-center overflow-hidden">
           <Image
             src="/heroimage.png"
             alt="Radio Alva's 88.4 FM Broadcast Studio"
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover object-[25%_center] sm:object-center"
             sizes="100vw"
           />
 
-          {/* Cinematic Vignette for High Contrast Legibility */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/35 pointer-events-none" />
+          {/* Cinematic Vignette for High Contrast Legibility without Obscuring Studio Image */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/25 pointer-events-none" />
 
           {/* Subtle Condenser Microphone Windscreen Badge Overlay */}
           <div className="absolute top-[44%] left-[17%] sm:left-[19%] -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden md:block z-10">
@@ -145,26 +145,26 @@ export default function HeroSection() {
               </div>
 
               {/* Line 5: Supporting Description */}
-              <p className="text-[11px] sm:text-xs md:text-sm text-slate-200/90 max-w-sm sm:max-w-lg mx-auto leading-relaxed font-light drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] px-2">
+              <p className="text-[11px] sm:text-xs md:text-sm text-slate-200/90 max-w-sm sm:max-w-lg mx-auto leading-relaxed font-light drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] px-2 line-clamp-2 sm:line-clamp-none">
                 Moodubidire is home to many voices, languages, traditions and ideas.
                 <span className="block sm:inline"> Radio Alva&apos;s 88.4 FM is a community platform for sharing them.</span>
               </p>
 
-              {/* Line 6: Master Interactive CTA Buttons (Mobile Responsive) */}
-              <div className="pt-2.5 sm:pt-3 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 w-full sm:w-auto px-4">
+              {/* Line 6: Master Interactive CTA Buttons (Mobile Responsive Row) */}
+              <div className="pt-2 sm:pt-3 flex flex-row flex-wrap items-center justify-center gap-2 sm:gap-4 w-auto px-2">
                 {/* Primary: LISTEN LIVE with circular white play badge */}
                 <button
                   onClick={togglePlay}
                   type="button"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full bg-gradient-to-r from-[#FF5E14] via-[#F59E0B] to-[#FF5E14] hover:from-[#EA580C] hover:to-[#EA580C] text-white font-black text-xs sm:text-sm uppercase tracking-wider transition-all shadow-[0_6px_25px_rgba(255,94,20,0.5)] hover:scale-105 active:scale-95 cursor-pointer group"
+                  className="inline-flex items-center justify-center gap-2 sm:gap-3 px-4.5 sm:px-7 py-2 sm:py-3 rounded-full bg-gradient-to-r from-[#FF5E14] via-[#F59E0B] to-[#FF5E14] hover:from-[#EA580C] hover:to-[#EA580C] text-white font-black text-xs sm:text-sm uppercase tracking-wider transition-all shadow-[0_6px_25px_rgba(255,94,20,0.5)] hover:scale-105 active:scale-95 cursor-pointer group shrink-0"
                 >
-                  <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white flex items-center justify-center shadow-xs shrink-0 group-hover:rotate-6 transition-transform">
+                  <span className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-white flex items-center justify-center shadow-xs shrink-0 group-hover:rotate-6 transition-transform">
                     {isLoading ? (
-                      <span className="inline-block w-3.5 h-3.5 border-2 border-[#FF5E14] border-t-transparent rounded-full animate-spin" />
+                      <span className="inline-block w-3 h-3 sm:w-3.5 sm:h-3.5 border-2 border-[#FF5E14] border-t-transparent rounded-full animate-spin" />
                     ) : isPlaying ? (
-                      <Pause className="w-3.5 h-3.5 fill-[#FF5E14] text-[#FF5E14]" />
+                      <Pause className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-[#FF5E14] text-[#FF5E14]" />
                     ) : (
-                      <Play className="w-3.5 h-3.5 fill-[#FF5E14] text-[#FF5E14] ml-0.5" />
+                      <Play className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-[#FF5E14] text-[#FF5E14] ml-0.5" />
                     )}
                   </span>
                   <span>{isPlaying ? "ON AIR NOW" : "LISTEN LIVE"}</span>
@@ -173,10 +173,10 @@ export default function HeroSection() {
                 {/* Secondary: EXPLORE OUR PROGRAMMES with white/glass border */}
                 <Link
                   href="#schedule"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-black/60 hover:bg-black/80 backdrop-blur-md border border-white/60 hover:border-amber-400 text-white font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-lg group"
+                  className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3.5 sm:px-6 py-2 sm:py-3 rounded-full bg-black/60 hover:bg-black/80 backdrop-blur-md border border-white/60 hover:border-amber-400 text-white font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-lg group shrink-0"
                 >
                   <span>EXPLORE OUR PROGRAMMES</span>
-                  <ArrowRight className="w-4 h-4 text-amber-400 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
 

@@ -121,10 +121,10 @@ export default function PersistentPlayer() {
           <div className="flex items-center gap-3 min-w-0 max-w-[48%] sm:max-w-md">
             <div className="relative h-11 w-11 sm:h-12 sm:w-12 rounded-xl overflow-hidden bg-[#FAF7F2] border border-[#E5DAC6] shrink-0 flex items-center justify-center p-1 shadow-xs">
               <Image
-                src="/radiologo.png"
+                src="/radiologo-clean.png"
                 alt="Radio Alva's"
-                width={44}
-                height={44}
+                width={48}
+                height={48}
                 className="object-contain"
               />
               {isPlaying && (

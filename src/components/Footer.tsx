@@ -57,7 +57,7 @@ export default function Footer() {
                 {/* Official Radio Alva's Logo in clean card */}
                 <div className="relative h-14 px-3 py-1.5 bg-white/95 rounded-xl shadow-md flex items-center">
                   <Image
-                    src="/radiologo.png"
+                    src="/radiologo-clean.png"
                     alt="Radio Alva's 88.4 FM Logo"
                     width={160}
                     height={50}

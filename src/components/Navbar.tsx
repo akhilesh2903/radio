@@ -221,34 +221,33 @@ export default function Navbar() {
           }`}
           aria-label="Main Navigation"
         >
-          {/* Brand Identity Area: First Alva's Logo, then Radio Logo (Large & Visible) */}
-          <Link href="#hero" className="flex items-center gap-2 sm:gap-3 shrink-0 group">
+          {/* Brand Identity Area: First Alva's Logo, then Radio Logo (Prominent & Clear on Mobile & Desktop) */}
+          <Link href="#hero" className="flex items-center gap-1.5 sm:gap-3 shrink-0 group">
             {/* 1. Alva's Education Foundation Official Emblem */}
-            <div className="relative h-10 sm:h-12 w-auto flex items-center">
+            <div className="relative h-9 sm:h-11 md:h-12 flex items-center shrink-0">
               <Image
                 src="/alvas-org-logo.png"
                 alt="Alva's Education Foundation Emblem"
-                width={100}
+                width={80}
                 height={48}
                 priority
-                className="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105"
+                className="h-8 sm:h-10 md:h-11 w-auto object-contain transition-transform group-hover:scale-105"
               />
             </div>
 
-            {/* Subtle Divider */}
-            <div className="h-7 sm:h-8 w-px bg-slate-200/90 hidden xs:block" />
+            {/* Clean Divider */}
+            <div className="h-6 sm:h-8 w-px bg-slate-200/90 shrink-0" />
 
-            {/* 2. Radio Alva's 88.4 FM Official Logo (Large & Visible) */}
-            <div className="relative h-11 sm:h-13 lg:h-14 w-28 sm:w-36 lg:w-44 flex items-center justify-center overflow-hidden">
-              <div className="relative w-44 sm:w-56 lg:w-64 h-44 sm:h-56 lg:h-38 shrink-0 flex items-center justify-center">
-                <Image
-                  src="/radiologo.png"
-                  alt="Radio Alva's 88.4 FM Logo"
-                  fill
-                  priority
-                  className="object-contain transition-transform group-hover:scale-105"
-                />
-              </div>
+            {/* 2. Radio Alva's 88.4 FM Official Logo */}
+            <div className="relative h-9 sm:h-11 md:h-12 flex items-center shrink-0">
+              <Image
+                src="/radiologo-clean.png"
+                alt="Radio Alva's 88.4 FM Logo"
+                width={150}
+                height={50}
+                priority
+                className="h-8 xs:h-9 sm:h-10 md:h-11.5 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-xs"
+              />
             </div>
           </Link>
 
@@ -385,10 +384,10 @@ export default function Navbar() {
               />
               <div className="h-6 w-px bg-slate-300" />
               <Image
-                src="/radiologo.png"
+                src="/radiologo-clean.png"
                 alt="Radio Alva's Logo"
-                width={90}
-                height={32}
+                width={120}
+                height={40}
                 className="h-8 w-auto object-contain"
               />
             </div>
